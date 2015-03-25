@@ -58,35 +58,83 @@
 	$preferredProvince = array();
 	$preferredRegion = array();
 	$counter = 0;
+	fclose($inputFileHandle);
 
-	$theLine = fgets($inputFileHandle);
-	$theLine = rtrim($theLine, "\n");
-	$theLine = rtrim($theLine, "\"");
-	$theLine = trim($theLine, "\"");
+	$csv = array_map('str_getcsv', file("TestLoadFile.CSV"));
+	//print_r($csv);
 
-	while($theLine) {
+	foreach($csv as $lineArray) {
+		if($counter!=0) {
+			list($constituentID[$counter], $giftAmount[$counter], $title[$counter],
+				$firstName[$counter], $lastName[$counter], $name[$counter],
+				$preferredCity[$counter], $preferredProvince[$counter], $preferredRegion[$counter] ) = array_pad($lineArray, 9, " ");
+		}
 
-		list($constituentID[$counter], $giftAmount[$counter], $title[$counter],
-			$firstName[$counter], $lastName[$counter], $name[$counter],
-			$preferredCity[$counter], $preferredProvince[$counter], $preferredRegion[$counter] ) = array_pad(explode("\",\"", $theLine,9), 9, " ");
-
-		$theLine = fgets($inputFileHandle);
-		$theLine = rtrim($theLine, "\n");
-		$theLine = rtrim($theLine, "\"");
-		$theLine = trim($theLine, "\"");
 		$counter++;
-
 	}
 
 
 
-	//echo $firstString . "\n";
 	$sorted_Array = array_unique($preferredRegion);
 	natcasesort($sorted_Array);
 
-	print_r($sorted_Array);
+	$sorted_Array_Titles = array_unique($title);
+	natcasesort($sorted_Array_Titles);
 
-	echo " size of array is " . count($sorted_Array) . "\n";
+	$sorted_Array_City = array_unique($preferredCity);
+	natcasesort($sorted_Array_City);
+
+	$sorted_Array_Provence = array_unique($preferredProvince);
+	natcasesort($sorted_Array_Provence);
+/*
+	print_r($sorted_Array_Titles);
+	print_r($sorted_Array_City);
+	print_r($sorted_Array_Provence);
+	print_r($sorted_Array);
+*/
+	
+	//similar_text("Barry's Bay", "Barrys Bay", $diff);
+	//$diff = levenshtein("St.isidore", "St. Isidore");
+	//echo "testing Val-Des-Monts vs Val-des-monts is " . $diff ."\n";
+	//compare all the city name to each other and output if value is >= x
+	foreach ($sorted_Array_City as $firstCity) {
+
+		foreach ($sorted_Array_City as $secondCity) {
+
+			similar_text($firstCity, $secondCity, $diff);
+			if($diff >= 75.0 && $diff != 100.0) echo "These are very similar " . $firstCity . " and " . $secondCity. "\n";
+
+		}
+	}
+
+
+	//create a new file with the unique Titles, Preferred City, Provence, Region
+	$inputFileHandle = fopen("uniqueTitles.txt", "w");
+
+	fwrite($inputFileHandle, "Unique Titles\n\n");
+
+	foreach($sorted_Array_Titles as $theValue) {
+		fwrite($inputFileHandle, $theValue . "\n" );
+	}
+
+	fwrite($inputFileHandle, "\nUnique Cities\n\n");
+
+	foreach($sorted_Array_City as $theValue) {
+		fwrite($inputFileHandle, $theValue . "\n" );
+	}
+
+	fwrite($inputFileHandle, "\nUnique Provences\n\n");
+
+	foreach($sorted_Array_Provence as $theValue) {
+		fwrite($inputFileHandle, $theValue . "\n" );
+	}
+
+	fwrite($inputFileHandle, "\nUnique Regions\n\n");
+
+	foreach($sorted_Array as $theValue) {
+		fwrite($inputFileHandle, $theValue . "\n" );
+	}
+
 
 
 	fclose($inputFileHandle);
