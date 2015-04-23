@@ -1,0 +1,9 @@
+Constituent ID (Must be a unique number) - Pledge number?
+Gift Amount (Number that represents money)
+Title 1 (Title)
+Title 2 (First Name)
+Title 3 (Last Name)
+Preferred City (Text)
+Preferred Provence (Text)
+Organization (Text)
+Anonymous (Boolean)

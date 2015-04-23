@@ -1,0 +1,179 @@
+Unique Titles
+
+
+Dr.
+Madame
+Mademoiselle
+Monsieur
+Monsieur et Madame
+Mr.
+Mr. and Mrs.
+Mrs.
+Ms.
+Reverend
+
+Unique Cities
+
+Alexandria
+Alfred
+Almonte
+Arnprior
+Ashton
+Athens
+Balderson
+Barry's Bay
+Barrys Bay
+Brinston
+Brockville
+Cardinal
+Carleton Place
+Carlsbad Springs
+Carp
+Casselman
+Chalk River
+Chapeau
+Chelsea
+Chesterville
+Chute A Blondeau
+Clarence Creek
+Cloyne
+Cobden
+Cornwall
+Crysler
+Cumberland
+Dalhousie
+Dalkeith
+Danford Lake
+Deep River
+Douglas
+Dunrobin
+Dunvegan
+Edwards
+Eganville
+Elgin
+Embrun
+Finch
+Fitzroy Harbour
+Fonthill
+Fournier
+Gananoque
+Gatineau
+Gloucester
+Grande Prairie
+Greely
+Green Valley
+Hawkesbury
+Ingleside
+Inkerman
+Iroquois
+Kanata
+Kars
+Kemptville
+Killaloe
+Kinburn
+Kingston
+L'Ange-gardien
+L'Ange-Gardien
+Lanark
+Lancaster
+Limoges
+Low
+Maberly
+Mackey
+MacKey
+Madoc
+Maitland
+Mallorytown
+Manotick
+Maxville
+Merrickville
+Messines
+Metcalfe
+Mississippi Station
+Monkland
+Moose Creek
+Mountain
+Mulgrave & Derry
+Munster
+Navan
+Nepean
+Newington
+North Gower
+Notre-Dame-Du-Nord
+Orleans
+Orléans
+Osgoode
+Ottawa
+Oxford Mills
+Oxford Station
+Pakenham
+Pembroke
+Perth
+Petawawa
+Pontiac
+Portland
+Prescott
+Quyon
+Renfrew
+Richmond
+Rockcliffe
+Rockland
+Russell
+Sarsfield
+Sharbot Lake
+Shawville
+Smiths Falls
+South Mountain
+St.isidore
+St. Isidore
+St Eugene
+Stittsville
+Thompson
+Toronto
+Val-Des-Monts
+Val-des-monts
+Vanier
+Vankleek Hill
+Vankleek Hill 
+Wakefield
+Waltham
+Wendover
+Williamsburg
+Williamstown
+Winchester
+Windsor
+Woodlawn
+
+Unique Provences
+
+
+Alberta
+Manitoba
+Nova Scotia
+Ontario
+Quebec
+
+Unique Regions
+
+
+01   Ottawa Region
+02   Gatineau  Region
+03   Arnprior Region
+04   Barry's Bay Region
+05   Brockville  Region
+07   Carleton Place/Almonte
+08   Cobden
+09   Cornwall Region
+10   Deep River Region
+11   Hawkesbury Region
+12   Chesterville Region
+13   Kingston Region
+14   Lanark Region
+15   Maniwaki Region
+16   Pembroke/Petawawa Region
+17   Perth Region
+18   Pontiac Region
+19   Renfrew Region
+20   Smith Falls Region
+21   Outside of Region
+25  Casselman Region
