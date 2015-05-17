@@ -161,6 +161,7 @@ Unique Regions
 03   Arnprior Region
 04   Barry's Bay Region
 05   Brockville  Region
+06   -
 07   Carleton Place/Almonte
 08   Cobden
 09   Cornwall Region
@@ -176,4 +177,7 @@ Unique Regions
 19   Renfrew Region
 20   Smith Falls Region
 21   Outside of Region
-25  Casselman Region
+22   Eganville Region
+23   -
+24   Unknown Region
+25   Casselman Region
