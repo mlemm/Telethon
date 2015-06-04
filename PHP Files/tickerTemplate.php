@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: testTemplate
+Template Name: tickerTemplate
 */
 
 /**
@@ -24,10 +24,8 @@ get_header(); ?>
 		<script type="text/javascript" charset="utf-8">
 			
 				$(function () {
-        		
-                alert("test");
-    				});
-
+                    alert("page loaded");
+        			});
 
 
 		</script>

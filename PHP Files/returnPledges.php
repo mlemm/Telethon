@@ -25,7 +25,7 @@ $returnPledges = '<div id="pledge_list">';
 
 
 for($a = 0; $a < $numPledges; $a++) {
-	$returnPledges .= '<a class="list-group-item" href="#">Pledge ' . $result[$a]['pledge_number'] . ' for $' . $result[$a]['amount'] . ' </a>';
+	$returnPledges .= "<a class='list-group-item' onClick='loadPledgeInfo(\"" . $result[$a]['pledge_number'] . "\"); return false;' href='#'>Pledge " . $result[$a]['pledge_number'] . ' for $' . $result[$a]['amount'] . ' </a>';
 }
    
 $returnPledges .= '</div>';

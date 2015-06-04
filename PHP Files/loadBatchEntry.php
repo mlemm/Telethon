@@ -6,19 +6,14 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/wp-config.php' );
 
 global $wpdb;
 
-//get the userid
-$current_user = wp_get_current_user();
+$batch_num = $_POST['batchNum'];
 
-$theCurrentUserID = $current_user->ID;
-
-//get a list of all pledges that have ok_to_publish as = 0 and match the current user id
-//loop thru them and return
-
-$result = $wpdb->get_results( "SELECT * FROM pledge_batch WHERE ok_to_publish=0 AND wp_userid=" . $theCurrentUserID, ARRAY_A );
+//get the batch number and get pledges from that id
+$result = $wpdb->get_results( "SELECT * FROM pledge_batch WHERE batch_number='" . $batch_num . "'", ARRAY_A);
 
 //if we do not find any open batches for the current user then return batch_number as null
 if(count($result) == 0) {
-	// no open batches found
+	// no batches found
 	$arr = array('batch_number' => 'null');
 	echo json_encode($arr);
 	return;

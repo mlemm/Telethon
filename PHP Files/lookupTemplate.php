@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: testTemplate
+Template Name: lookupTemplate
 */
 
 /**
@@ -23,12 +23,7 @@ get_header(); ?>
 
 		<script type="text/javascript" charset="utf-8">
 			
-				$(function () {
-        		
-                alert("test");
-    				});
-
-
+				alert("Loopkup");
 
 		</script>
 
